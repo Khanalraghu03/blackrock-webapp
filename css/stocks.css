@@ -17,6 +17,6 @@
 	flex-wrap: wrap;
 }
 
-.col.s1 {
-	width: 100%;
+.row .col.s1 {
+	width: 100% !important;
 }
