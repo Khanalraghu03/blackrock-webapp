@@ -165,7 +165,7 @@ $(document).ready(function() {
 	$(".modal").modal();
 
 	// Site under construction message
-	M.toast({html: "Site under construction", classes: "rounded"});
+	// M.toast({html: "Site under construction", classes: "rounded"});
 });
 
 window.onbeforeunload = savePortfolio;
