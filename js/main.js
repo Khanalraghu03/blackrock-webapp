@@ -1,8 +1,9 @@
 var email_username = "vasb";
 var email_domain = "vairfgzngrf.pbz";
 var portfolio = Array();
+var stocks = Array();
 
-var stocks = [
+var stocksTest = [
 	{
 		"ticker": "GOOG",
 		"price": "1,479",
@@ -50,6 +51,39 @@ function deRotNode(node) {
 	});
 }
 
+function loadStockData(func) {
+	var results;
+	var url = "https://api.allorigins.win/raw?url=https://www.blackrock.com/tools/hackathon/performance?identifiers=LRRCX%2CSSMJX%2CGDNEY%2CANW%2CQUS%2CEWGS%2CSSTEEL%2CFMISX%2CVQCGX%2CARGW";
+	var xhr = $.get(url, function(data) {
+		results = data.resultMap.RETURNS;
+		$.each(results, function(i, el) {
+			var ticker = el.uniqueId;
+			var daily = el.latestPerf;
+			var price = Math.round(Math.random() * 1000 + 200);
+
+			if (ticker && daily && price && daily.level) {
+				var stock = {
+					"ticker": ticker,
+					"daily": daily.level.toFixed(2),
+					"price": price
+				}
+				stocks.push(stock);
+			}
+		});
+		if (typeof func === "function") {
+			console.log("loadStockData callback");
+			func();
+		}
+	})
+	.done(function() {
+		console.log("loaded api data");
+	})
+	.fail(function() {
+		console.log("failed to update data");
+		stocks = stocksTest;
+	});
+}
+
 function loadPortfolio() {
 	var tempPortfolio;
 	if (localStorage.tickers === undefined) {
@@ -83,6 +117,7 @@ function getStockData(ticker) {
 }
 
 function buildTickerCard(ticker, remove) {
+	console.log("building", ticker, "from", stocks);
 	var data = getStockData(ticker);
 	if (data !== undefined) {
 		var containerDiv = $('<div class="card-container col s1 m4">');

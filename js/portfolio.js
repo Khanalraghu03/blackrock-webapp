@@ -19,19 +19,20 @@ $(document).ready(function() {
 	});
 
 	// Add stock info
-	var $rows = Array();
-	var $row;
-	$.each(Array.from(portfolio), function(i, el) {
-		console.log("portfolio", portfolio, "el", el);
-		if (i % 3 == 0) {
-			$row = $('<div class="row">');
-			$rows.push($row);
-		}
-		card = buildTickerCard(el, true);
-		$row.append(card);
-		console.log("appended", card, "to", $row);
+	loadStockData(function() {
+		var $rows = Array();
+		var $row;
+		$.each(Array.from(portfolio), function(i, el) {
+			console.log("building el", el);
+			if (i % 3 == 0) {
+				$row = $('<div class="row">');
+				$rows.push($row);
+			}
+			card = buildTickerCard(el, true);
+			$row.append(card);
+			console.log("appended", card, "to", $row);
+		});
+		console.log("rows", $rows);
+		$("#stocks-container").append($rows);
 	});
-	console.log("rows", $rows);
-	$("#stocks-container").append($rows);
-
 });
