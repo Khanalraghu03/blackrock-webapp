@@ -12,6 +12,17 @@
 	opacity: 0.8;
 }
 
+@media only screen and (max-width: 600px) {
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.row .col.s1 {
+		width: 100% !important;
+	}
+}
+
 /*
 .row {
 	display: flex;
