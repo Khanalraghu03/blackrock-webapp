@@ -1,7 +1,12 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body, html {
 	padding: 0;
 	margin: 0;
 	font-family: "Josefin Sans", sans-serif;
+	font-size: 1.2em;
 }
 
 a {
@@ -15,6 +20,10 @@ b {
 .header {
 	font-family: "Quicksand", sans-serif;
 	font-weight: 500;
+}
+
+.header a:hover {
+	text-decoration: underline;
 }
 
 .block {
@@ -34,6 +43,12 @@ b {
 	-moz-user-select: none; /* Old versions of Firefox */
 	-ms-user-select: none; /* Internet Explorer/Edge */
 	user-select: none; /* Chrome */
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
 }
 
 .shift-left {
@@ -62,14 +77,26 @@ main {
 }
 
 main > section {
-	height: calc(100vh - 64px);
 	padding: 2em;
+}
+
+main > section.valign {
+	height: calc(100vh - 64px);
 	display: flex;
 	align-items: center;
 }
-
+main > section.valign.center-align .section-inner {
+	width: 100%;
+}
+main > section.valign p {
+	width: 50%;
+	margin: 0;
+}
 main > section:nth-child(even) {
 	background-color: rgba(0, 0, 0, 0.2);
+}
+main > section:nth-child(even) .header {
+	text-align: right;
 }
 
 .section-image {

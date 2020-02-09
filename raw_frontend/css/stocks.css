@@ -1,0 +1,13 @@
+.card-action {
+	text-align: center;
+}
+
+.card-action a {
+	background-color: purple !important;
+	margin: 0 0.5em;
+}
+
+.stock-graph-mini {
+	width: 100%;
+	opacity: 0.8;
+}

@@ -1,3 +1,9 @@
+var contactMessages = [
+	"what's on your mind?",
+	"drop a line!",
+	"we'd love to hear from you!"
+];
+
 function escapeHTML(unsafe) {
 	return unsafe
 		.replace(/&/g, "&amp;")
@@ -8,6 +14,10 @@ function escapeHTML(unsafe) {
  }
 
 $(document).ready(function() {
+	// Pick a random message
+	let contactMessage = contactMessages[Math.floor(Math.random() * contactMessages.length)];
+	$("#contact-message").text(contactMessage);
+	
 	$("#contact-form").submit(function(event) {
 		event.preventDefault();
 		$.ajax({
