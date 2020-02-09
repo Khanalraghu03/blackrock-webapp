@@ -11,3 +11,12 @@
 	width: 100%;
 	opacity: 0.8;
 }
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.col.s1 {
+	width: 100%;
+}
