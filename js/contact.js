@@ -26,7 +26,7 @@ $(document).ready(function() {
 				name: $("#contact-name").val(),
 				from: $("#contact-email").val(),
 				subject: $("#contact-subject").val(),
-				msg: $("#contact-message").val(),
+				msg: $("#contact-message").text(),
 				to: $("#contact-recipient").val()
 			},
 			dataType: "json"
