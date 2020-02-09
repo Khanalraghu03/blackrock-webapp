@@ -1,0 +1,49 @@
+.color-void {
+	background-color: #E1E1E1 !important;
+}
+.color-translucent {
+	backdrop-filter: blur(5px);
+}
+
+.color-primary-translucent {
+	background-color: rgba(0, 0, 0, 0.3) !important;
+}
+.color-primary {
+	background-color: #212121 !important;
+}
+.color-primary-dark {
+	background-color: #000 !important;
+}
+.color-primary-light {
+	background-color: #484848 !important;
+}
+.color-secondary {
+	background-color: #006064 !important;
+}
+.color-secondary-dark {
+	background-color: #00363a !important;
+}
+.color-secondary-light {
+	background-color: #428e92 !important;
+}
+nav.color-primary ul a:hover, nav.color-primary-dark ul a:hover,
+nav.color-primary-light ul a:hover, nav.color-primary-translucent ul a:hover,
+nav.color-secondary ul a:hover, nav.color-secondary-dark ul a:hover {
+	background-color: rgba(100, 100, 100, 0.5);
+}
+nav.color-secondary-light ul a:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.color-primary, .color-primary-dark, .color-primary-light,
+.color-primary-translucent, .color-secondary, .color-secondary-dark,
+.color-primary input, .color-primary-dark input, .color-primary-light input,
+.color-primary-translucent input, .color-secondary input, .color-secondary-dark input,
+.color-primary textarea, .color-primary-dark textarea, .color-primary-light textarea,
+.color-primary-translucent textarea, .color-secondary textarea, .color-secondary-dark textarea {
+	color: #FFF !important;
+}
+.color-secondary-light,
+.color-secondary-light input,
+.color-secondary-light textarea {
+	color: #000 !important;
+}

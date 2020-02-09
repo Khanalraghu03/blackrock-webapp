@@ -1,0 +1,123 @@
+body, html {
+	padding: 0;
+	margin: 0;
+	font-family: "Josefin Sans", sans-serif;
+}
+
+a {
+	color: inherit;
+}
+
+b {
+	font-weight: bold;
+}
+
+.header {
+	font-family: "Quicksand", sans-serif;
+	font-weight: 500;
+}
+
+.block {
+	display: block;
+}
+.inline-block {
+	display: inline-block;
+}
+.flex {
+	display: flex;
+}
+
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Chrome */
+}
+
+.shift-left {
+	position: relative;
+	left: -1em;
+}
+.shift-right {
+	position: relative;
+	right: 1em;
+}
+
+.brand-logo {
+	font-family: "Josefin Sans", Arial, sans-serif;
+}
+
+.sidenav>li a, nav a {
+	font-weight: 500;
+}
+.sidenav>li a:hover {
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+main {
+	padding: 0;
+	overflow: auto;
+}
+
+main > section {
+	height: calc(100vh - 64px);
+	padding: 2em;
+	display: flex;
+	align-items: center;
+}
+
+main > section:nth-child(even) {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.section-image {
+	width: 40%;
+}
+
+footer {
+	font-size: 0.8em;
+	margin: 20px; /* I prefer em, but I use px here to stay consistent with materializecss' row margin */
+	padding: 1em;
+	color: #DDD;
+	z-index: 3;
+}
+footer, footer > *:last-child {
+	margin-bottom: 0;
+}
+
+footer a:link, footer a:active, footer a:visited {
+	color: #CCC;
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#social {
+	font-size: 2em;
+}
+
+#social a {
+	margin: 0 0.5em;
+	display: inline-block;
+	transform: rotateZ(0deg);
+	transition: transform 0.3s ease-in-out;
+}
+
+#social a:hover {
+	transform: rotateZ(360deg);
+}
+
+#page-background {
+	z-index: -9001;
+	position: fixed !important;
+}
+
+.slider .slides li .caption {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 1em;
+}
